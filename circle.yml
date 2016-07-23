@@ -5,7 +5,7 @@ deployment:
   dockerhub:
     branch: master
     commands:
-      - $DOCKER_HUB_TRIGGER
+      - "curl -H "Content-Type:application/json" --data '{"build":true}' -X POST https://registry.hub.docker.com/u/nirm/pluralsight-docker-ci-master/trigger/b57aa708-aed6-40f6-977e-"
 
 test:
   override:    
